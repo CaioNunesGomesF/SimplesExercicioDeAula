@@ -17,15 +17,20 @@ import java.util.Scanner;
 
         // Faça um algoritimo para calcular a média aritmética entre
 
-        System.out.println("Digite a primeira nota.");
+        System.out.println("Digite a primeira nota: ");
         double nota1 = sc.nextDouble();
 
-        System.out.println("Digite a segunda nota.");
+        System.out.println("Digite a segunda nota: ");
         double nota2 = sc.nextDouble();
 
-        // Cálculo da média
+        if(nota1 < 0 || nota1 > 10 || nota2 < 0 || nota2 > 10) {
+            System.out.println("Digite uma nota maior que 0 ou menor que 10.");
 
-        double media = nota1 + nota2 / 2;
+        }else {
+            
+            // Cálculo da média
+
+            double media = (nota1 + nota2) / 2;
 
         // Fim
 
@@ -35,6 +40,23 @@ import java.util.Scanner;
 
 }
 ```
+
+### Saida correta:
+
+    Digite a primeira nota: 
+    7,9
+    Digite a segunda nota:
+    9,8
+    A media dos alunos é 8,9
+
+### Saida errada:
+
+    Digite a primeira nota: 
+    60
+    Digite a segunda nota:
+    32
+    Digite uma nota maior que 0 ou menor que 10.
+
 
 ## 2- Calcular de horas para minutos e segundos:
     
@@ -53,7 +75,7 @@ public class CalculoHoras {
 
         // Hora
 
-        System.out.print("Digite um hora qualquer: ");
+        System.out.print("Digite uma hora qualquer: ");
         horas = sc.nextInt();
 
         if(horas == 1)
@@ -82,6 +104,16 @@ public class CalculoHoras {
     }
 ```
 
+### Saida:
+
+    Digite uma hora qualquer: 18
+
+    Hora digitada = 18 horas.
+    
+    Convertido em minutos = 540 minutos.
+    
+    Convertido em segundos = 32400 segundos.
+
 ## 3- Calcular o numero de diagonais do polígono convexo:
 
 ```
@@ -109,6 +141,11 @@ public class CalculoPoligonoConvexo {
     }
 }
 ```
+### Saida:
+
+    Digite o número de lados do polígono convexo: 9
+
+    O número de diagonais do polígono é: 5
 
 ### Informações adicionais:
 
